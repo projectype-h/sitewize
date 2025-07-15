@@ -16,67 +16,114 @@
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#install">How to Download</a>
-        <a href="#extension">Extension</a>
+        <a href="#extension">Download</a>
+        <a href="#test">Test Website</a>
+        <a href="#demo">Live Demo</a>
+        <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
+      <select id="theme-switcher" title="Theme">
+        <option value="default">🔵 Blue</option>
+        <option value="dark">🌙 Dark</option>
+        <option value="neon">🟢 Neon</option>
+      </select>
     </div>
   </header>
 
   <main>
-    <section id="features" class="section features-section">
+    <section id="features" class="section">
       <div class="container">
         <h2>Extension Features</h2>
         <div class="features-grid">
+          <div class="feature-card"><h3>🟢 Safe</h3><p>Green icon when a site is trusted.</p></div>
+          <div class="feature-card"><h3>🟡 Suspicious</h3><p>Yellow warning for unverified activity.</p></div>
+          <div class="feature-card"><h3>🔴 Dangerous</h3><p>Red alert for phishing or malware sites.</p></div>
           <div class="feature-card">
-            <h3>🟢 <strong>Safe</strong></h3>
-            <p>Green icon when a site is clean and trusted.</p>
-          </div>
-          <div class="feature-card">
-            <h3>🟡 <strong>Suspicious</strong></h3>
-            <p>Yellow alert for untrusted or strange behavior.</p>
-          </div>
-          <div class="feature-card">
-            <h3>🔴 <strong>Dangerous</strong></h3>
-            <p>Red warning for phishing, scams, or malware.</p>
-          </div>
-          <div class="feature-card">
-            <h3>⚙️ <strong>Settings</strong></h3>
+            <h3>⚙️ Customization</h3>
             <ul>
-              <li>Customize icon colors</li>
-              <li>Enable/disable popup alerts</li>
-              <li>Whitelist trusted domains</li>
-              <li>Block known scam URLs</li>
+              <li>Change alert colors</li>
+              <li>Toggle popups</li>
+              <li>Whitelist domains</li>
+              <li>Real-time detection</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="install" class="section install-section">
+    <section id="install" class="section">
       <div class="container">
         <h2>How to Install Sitewize</h2>
         <ol class="install-steps">
-          <li>Download the Sitewize extension ZIP</li>
+          <li>Download the Sitewize extension ZIP below</li>
           <li>Unzip the folder</li>
-          <li>Open Chrome & visit <code>chrome://extensions</code></li>
-          <li>Enable Developer Mode</li>
+          <li>Go to <code>chrome://extensions</code> in Chrome</li>
+          <li>Turn on Developer Mode</li>
           <li>Click “Load unpacked” and select the folder</li>
         </ol>
         <div class="video-wrapper">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/7QMms3aZa80" 
-          title="How to install a Chrome extension locally" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/7QMms3aZa80"
+          title="How to install a Chrome extension locally" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
-    <section id="extension" class="section extension-section">
+    <section id="extension" class="section">
       <div class="container">
-        <h2>Download the Sitewize Extension</h2>
-        <p>Click the button below to download the Sitewize Chrome Extension files:</p>
-        <a href="sitewize-extension.zip" class="cta-button" download>⬇️ Download Extension</a>
-        <p style="margin-top:20px;"><em>After downloading, follow the installation steps above to load it in Chrome.</em></p>
+        <h2>Download the Extension</h2>
+        <p>Download and install the Sitewize extension to protect your browsing:</p>
+        <a href="Sitewize_Extension.zip" class="cta-button" download>⬇️ Download Extension ZIP</a>
+      </div>
+    </section>
+
+    <section id="test" class="section">
+      <div class="container">
+        <h2>Test a Website</h2>
+        <p>Type a website and see a simulated safety result:</p>
+        <input type="text" id="site-input" placeholder="Enter a website..." />
+        <button onclick="runFakeScan()">Check</button>
+        <div id="scan-result"></div>
+      </div>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="container">
+        <h2>Live Safety Status</h2>
+        <p>This box shows the current safety simulation.</p>
+        <div id="safety-box" class="safety-box">🟢 Safe Site</div>
+        <div class="demo-controls">
+          <button onclick="simulateSafety('safe')">Safe</button>
+          <button onclick="simulateSafety('suspicious')">Suspicious</button>
+          <button onclick="simulateSafety('dangerous')">Dangerous</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <p>$0 / forever</p>
+            <ul>
+              <li>Color safety alerts</li>
+              <li>Basic popup warnings</li>
+              <li>Unlimited scans</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Pro</h3>
+            <p>Coming Soon</p>
+            <ul>
+              <li>Custom color themes</li>
+              <li>Advanced phishing filters</li>
+              <li>Auto-block suspicious scripts</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
