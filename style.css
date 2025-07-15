@@ -137,6 +137,9 @@ body {
 
 /* Animations */
 .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
@@ -156,4 +159,8 @@ body {
     justify-content: center;
     margin-top: 10px;
   }
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
