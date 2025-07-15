@@ -53,6 +53,28 @@ body {
   padding-left: 20px;
   font-size: 1.1rem;
 }
+.video-wrapper {
+  margin-top: 30px;
+  max-width: 100%;
+}
+.video-wrapper iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cta-button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #0056b3;
+}
 .site-footer {
   background: #007bff;
   color: white;
