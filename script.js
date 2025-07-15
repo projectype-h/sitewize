@@ -20,14 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   setInterval(createBubble, 500);
 
+  // Fix: Theme Switcher (adds/removes correct classes)
   themeSwitcher.addEventListener("change", (e) => {
-    const theme = e.target.value;
     body.classList.remove("dark", "neon");
-    if (theme === "dark") body.classList.add("dark");
-    else if (theme === "neon") body.classList.add("neon");
+    const theme = e.target.value;
+    if (theme === "dark") {
+      body.classList.add("dark");
+    } else if (theme === "neon") {
+      body.classList.add("neon");
+    }
   });
 
-  // Safety demo simulation
+  // Fix: Safety Box Simulation
   window.simulateSafety = function(type) {
     safetyBox.classList.remove("yellow", "red");
     if (type === "safe") {
@@ -41,18 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Test site box logic
+  // Fix: Test a Website box logic
   window.runFakeScan = function() {
-    const input = document.getElementById("site-input").value.toLowerCase();
+    const input = document.getElementById("site-input");
     const output = document.getElementById("scan-result");
-    if (input.includes("bank") || input.includes("free-money") || input.includes("login-verify")) {
-      output.innerHTML = "🔴 Dangerous site (phishing attempt)";
-    } else if (input.includes("ads") || input.includes("track")) {
-      output.innerHTML = "🟡 Suspicious: tracking or ads detected";
-    } else if (input.trim() === "") {
+    const url = input.value.toLowerCase().trim();
+
+    if (!url) {
       output.innerHTML = "⚠️ Please enter a website";
+      return;
+    }
+
+    if (url.includes("bank") || url.includes("phish") || url.includes("verify-login")) {
+      output.innerHTML = "🔴 Dangerous site (phishing)";
+    } else if (url.includes("ads") || url.includes("tracker") || url.includes("click")) {
+      output.innerHTML = "🟡 Suspicious site (tracking detected)";
     } else {
-      output.innerHTML = "🟢 Safe site";
+      output.innerHTML = "🟢 Safe site (no known issues)";
     }
   };
 });

@@ -4,6 +4,26 @@ body {
   background: white;
   color: #0a3d62;
 }
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+body.dark .feature-card,
+body.dark .pricing-card,
+body.dark .cta-button {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+body.neon {
+  background: #000000;
+  color: #39ff14;
+}
+body.neon .feature-card,
+body.neon .pricing-card,
+body.neon .cta-button {
+  background: #111111;
+  color: #39ff14;
+}
 .container {
   width: 90%;
   max-width: 1200px;
